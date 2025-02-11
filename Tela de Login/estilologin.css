@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.conteiner {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-login {
+    width: 400px;
+    position: absolute;
+}
+
+.box-login form {
+    width: 100%;
+    padding: 0 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: aqua;
+    text-align: center;
+}
+
+.caixa-entrada {
+    position: relative;
+    margin: 25px 0;
+}
+
+.caixa-entrada input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    outline: none;
+    border-radius: 40px;
+    transition: .5s ease;
+}
+
+.caixa-entrada label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 1.2rem;
+    transform: translateY(-50%);
+    color: white;
+    position: none;
+    transition: .5s ease;
+}
+
+.esqueceu {
+    margin: -10px 0 10px;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.esqueceu a {
+    text-decoration: none;
+    color: lightcoral;
+}
+
+.esqueceu a:hover {
+    text-decoration: underline;
+    color: lightcoral;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #0ef;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: blue;
+    font-weight: 700;
+}
+
+.cadastrese {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.cadastrese a{
+    font-size: .8rem;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.cadastrese a:hover {
+    text-decoration: underline;
+}
+
+.caixa-entrada input:focus ~ label,
+.caixa-entrada input:valid ~ label {
+    top: 0px;
+    font-size: .7rem;
+    background: #2c4766;
+    color: #0ef;
+    padding: 0 10px;
+    border-radius: 7px;
+}
+
+.caixa-entrada input:focus,
+.caixa-entrada input:valid {
+    border-color: #0ef;
+}
+
+.caixa-entrada input {
+    font-size: 1.2rem;
+    color: #bb0808;
+    padding: 0 20px;
+}
+
+.conteiner span {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    border-radius: 8px;
+
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg /50)));
+    transform-origin: 128px;
+
+    animation: brilho 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+}
+
+@keyframes brilho {
+    0% { background-color: #0ef;}
+    10% { background: #1E90FF;}
+    20% { background: #4169E1;}
+    30% { background: #0000CD;}
+    40% { background: #00008B;}
+    50% { background: #000080;}
+    60% { background: #191970;}
+    70% { background: #05011a;}
+}
